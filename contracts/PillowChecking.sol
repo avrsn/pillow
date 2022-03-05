@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
+import "hardhat/console.sol";
+
 contract PillowChecking {
   
   mapping(address => uint) checkingAccounts;
@@ -11,7 +13,9 @@ contract PillowChecking {
   address thisAddress;
 
   function setThisAddress() public {
+    console.log("Begin of setThisAddress");
     thisAddress = msg.sender;
+    console.log("End of setThisAddress");
   }
 
   function getThisAddress() public view returns(address) {

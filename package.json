@@ -1,0 +1,26 @@
+{
+  "name": "pillow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avrsn/pillow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avrsn/pillow/issues"
+  },
+  "homepage": "https://github.com/avrsn/pillow#readme",
+  "devDependencies": {
+    "hardhat": "^2.9.1"
+  }
+}
