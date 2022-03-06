@@ -56,12 +56,15 @@ contract PillowChecking {
   function createAccount(uint _savingsGoal) public {
     
     //require(!hasAccount[msg.sender]);
-    //console.log("Create Account");
+    console.log("Create Account 1");
     hasAccount[msg.sender] = true;
+    console.log("Create Account 2");
     accountAddresses.push(msg.sender);
-
-    PillowSavingss pillowSavingsInstance = PillowSavingss(pillowSavingsAddress);
+    console.log("Create Account 3");
+    PillowSavingsInterface pillowSavingsInstance = PillowSavingsInterface(pillowSavingsAddress);
+    console.log("Create Account 4");
     pillowSavingsInstance.createSavingsPlan(msg.sender, _savingsGoal);
+    console.log("Create Account 5");
   }
 
   function deposit() external payable {
@@ -93,7 +96,7 @@ contract PillowChecking {
 
     require(hasAccount[msg.sender]);
 
-    PillowSavingss pillowSavingsInstance = PillowSavingss(_savingsAddr);
+    PillowSavingsInterface pillowSavingsInstance = PillowSavingsInterface(_savingsAddr);
     checkingAccounts[msg.sender] += pillowSavingsInstance.withdraw(msg.sender);
 
   }
@@ -109,7 +112,7 @@ contract PillowChecking {
 
     require(hasAccount[msg.sender]);
 
-    PillowSavingss pillowSavingsInstance = PillowSavingss(_savingsAddr);
+    PillowSavingsInterface pillowSavingsInstance = PillowSavingsInterface(_savingsAddr);
     return pillowSavingsInstance.savingsBalance(msg.sender);
 
   }
@@ -122,7 +125,7 @@ contract PillowChecking {
       revert("You are attempting to transfer more funds than are currently available in the checking account.");
     }
 
-    PillowSavingss pillowSavingsInstance = PillowSavingss(_savingsAddr);
+    PillowSavingsInterface pillowSavingsInstance = PillowSavingsInterface(_savingsAddr);
 
     checkingAccounts[msg.sender] -= _transferAmount;
     pillowSavingsInstance.transferDeposit(msg.sender, _transferAmount);
@@ -132,7 +135,7 @@ contract PillowChecking {
 
 }
 
-interface PillowSavingss {
+interface PillowSavingsInterface {
   function transferDeposit(address _msgSender, uint _transferAmount) external;
   function createSavingsPlan(address _msgSender, uint _savingsGoal) external;
   function savingsBalance(address _msgSender) view external returns(uint);

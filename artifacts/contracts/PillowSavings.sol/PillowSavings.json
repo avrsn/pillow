@@ -1,0 +1,16 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "PillowSavings",
+  "sourceName": "contracts/PillowSavings.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052734b38016118fde970e2371740f849840aec745c7b6000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550348015606357600080fd5b50603f8060716000396000f3fe6080604052600080fdfea26469706673582212206ab7e4aa2580466ea801f5bf82f2738ecb8cf7c66bccc22505830b7145a3afc964736f6c63430007030033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212206ab7e4aa2580466ea801f5bf82f2738ecb8cf7c66bccc22505830b7145a3afc964736f6c63430007030033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
